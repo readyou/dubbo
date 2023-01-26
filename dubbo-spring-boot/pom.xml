@@ -192,4 +192,19 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Releases</name>
+            <!--            <url>http://nexus.os.adc.com/nexus/content/repositories/releases/</url>-->
+            <url>https://maven-repo.dev.klook.io/repository/maven-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Snapshot</name>
+            <!--            <url>http://nexus.os.adc.com/nexus/content/repositories/snapshots/</url>-->
+            <url>https://maven-repo.dev.klook.io/repository/maven-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

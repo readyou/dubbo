@@ -41,12 +41,12 @@
         </license>
     </licenses>
 
-    <scm>
-        <url>https://github.com/apache/dubbo</url>
-        <connection>scm:git:https://github.com/apache/dubbo.git</connection>
-        <developerConnection>scm:git:https://github.com/apache/dubbo.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
+<!--    <scm>-->
+<!--        <url>https://github.com/apache/dubbo</url>-->
+<!--        <connection>scm:git:https://github.com/apache/dubbo.git</connection>-->
+<!--        <developerConnection>scm:git:https://github.com/apache/dubbo.git</developerConnection>-->
+<!--        <tag>HEAD</tag>-->
+<!--    </scm>-->
     <mailingLists>
         <mailingList>
             <name>Development List</name>
@@ -127,7 +127,7 @@
         <arguments />
         <checkstyle.skip>true</checkstyle.skip>
         <rat.skip>true</rat.skip>
-        <revision>2.7.20</revision>
+        <revision>2.7.20-SNAPSHOT</revision>
     </properties>
 
     <modules>
@@ -717,4 +717,19 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Releases</name>
+            <!--            <url>http://nexus.os.adc.com/nexus/content/repositories/releases/</url>-->
+            <url>https://maven-repo.dev.klook.io/repository/maven-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Snapshot</name>
+            <!--            <url>http://nexus.os.adc.com/nexus/content/repositories/snapshots/</url>-->
+            <url>https://maven-repo.dev.klook.io/repository/maven-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
